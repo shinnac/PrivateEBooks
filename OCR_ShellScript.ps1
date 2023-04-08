@@ -1,8 +1,8 @@
 # フォルダパスを指定
-$folderPath = "C:\Users\shin\Documents\PrivateEBooks\input"
+$folderPath = "input"
 
 # 出力フォルダを指定
-$outputFolder = "C:\Users\shin\Documents\PrivateEBooks\output\"
+$outputFolder = "output"
 
 # 指定されたフォルダ内のすべてのPNGファイルを取得
 $files = Get-ChildItem $folderPath -Filter *.png
