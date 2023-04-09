@@ -2,7 +2,7 @@
 $folderPath = "input"
 
 # 出力フォルダを指定
-$outputFolder = "output\"
+$outputFolder = "output"
 
 # 指定されたフォルダ内のすべてのPNGファイルを取得
 $files = Get-ChildItem $folderPath -Filter *.png
@@ -10,7 +10,7 @@ $files = Get-ChildItem $folderPath -Filter *.png
 # すべてのPNGファイルに対して処理を行う
 foreach ($file in $files) {
     # Tesseract OCRを使用してPDFファイルを作成
-    &"C:\Program Files\Tesseract-OCR\tesseract.exe" $file.FullName "$outputFolder\$($file.BaseName)" -l jpn_vert pdf
+    &"C:\Program Files\Tesseract-OCR\tesseract.exe" $file.FullName "$outputFolder\$($file.BaseName)" -l jpn_vert+jpn pdf
 }
 
 explorer.exe $outputFolder
